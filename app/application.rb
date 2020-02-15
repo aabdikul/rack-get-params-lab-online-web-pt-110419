@@ -22,7 +22,6 @@ class Application
     elsif req.path.match(/cart/)
       @@cart.any? == true
         return @@cart
-      end
 
     else
       resp.write "Path Not Found"
