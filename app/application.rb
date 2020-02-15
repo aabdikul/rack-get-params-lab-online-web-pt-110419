@@ -21,7 +21,9 @@ class Application
 
     elsif req.path.match(/cart/)
       @@cart.any? == true
-        return @@cart
+      @@cart.each do |item|
+        resp.write "#{item}"
+      end
 
     else
       resp.write "Path Not Found"
