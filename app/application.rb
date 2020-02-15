@@ -30,7 +30,6 @@ class Application
       if @@items.include?(search_term) == true
         @@cart << search_term
         resp.write "added #{search_term}"
-        binding.pry
       else
         resp.write "We don't have that item"
       end
