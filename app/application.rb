@@ -20,9 +20,8 @@ class Application
       resp.write "Your cart is empty"
 
     elsif req.path.match(/cart/)
-      values = @@cart
-      values.any? 
-        resp.write "#{values}"
+      @@cart.any?
+        resp.write 
       end
 
     else
