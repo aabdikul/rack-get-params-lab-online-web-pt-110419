@@ -21,8 +21,7 @@ class Application
 
     elsif req.path.match(/cart/)
       @@cart.any? == true
-      @@cart.each do |item|
-        resp.write "#{item}"
+        resp.write "#{@@cart}"
       end
 
     else
