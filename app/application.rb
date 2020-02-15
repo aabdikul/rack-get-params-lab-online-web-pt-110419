@@ -21,7 +21,7 @@ class Application
 
     elsif req.path.match(/cart/)
       @@cart.any?
-        resp.write 
+        return @@cart 
       end
 
     else
