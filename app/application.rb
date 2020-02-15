@@ -21,7 +21,7 @@ class Application
 
     elsif req.path.match(/cart/)
       values = @@cart
-      values.any? == true
+      values.any? 
         resp.write "#{values}"
       end
 
