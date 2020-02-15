@@ -32,6 +32,7 @@ class Application
         resp.write "added #{search_term}"
       else
         resp.write "We don't have that item"
+        binding.pry
       end
 
     else
