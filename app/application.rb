@@ -20,7 +20,7 @@ class Application
       resp.write "Your cart is empty"
 
     elsif req.path.match(/cart/)
-      @@cart.any? == true
+      @@cart.any?
         return @@cart
 
     else
