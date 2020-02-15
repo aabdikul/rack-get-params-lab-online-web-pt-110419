@@ -16,8 +16,14 @@ class Application
       resp.write handle_search(search_term)
 
     elsif req.path.match(/cart/)
-      @@cart.empty? 
+      @@cart.empty?
       resp.write "Your cart is empty"
+
+    elsif req.path.match(/cart/)
+      @@cart.any? == true
+      @@card.each do |item|
+        resp.write "#{item}"
+      end
 
     else
       resp.write "Path Not Found"
